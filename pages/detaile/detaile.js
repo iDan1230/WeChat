@@ -5,14 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-    navigationBarTitleText: "面试详情"
+    id:null
+    
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    wx.setNavigationBarTitle({
+      
+      title: wx.getStorageSync('title')//接受上一个页面的参数
+
+    })
+
+    this.setData({
+      id:wx.getStorageSync('id')
+    })
+
+    console.log(this.id)
   },
 
   /**

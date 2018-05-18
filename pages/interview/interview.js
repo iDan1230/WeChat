@@ -92,7 +92,9 @@ Page({
   itemClick: function (e) {
 
     var index = e.currentTarget.dataset.index;
+    
     console.log(index)
+    wx.setStorageSync("title",'详情')
     wx.navigateTo({
       url: '/pages/detaile/detaile',
     })

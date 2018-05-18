@@ -28,7 +28,7 @@ swiper image {
 
 .item_title {
   margin-left: 10rpx;
-  color: blue;
+  color: #0097FE;
   font-size: 40rpx;
   display: -webkit-box;
   word-break: break-all;
@@ -42,7 +42,7 @@ swiper image {
   min-height: 90rpx;
   margin-left: 10rpx;
   margin-top: 10rpx;
-  color: blue;
+  color: #0097FE;
   font-size: 35rpx;
   display: -webkit-box;
   word-break: break-all;
