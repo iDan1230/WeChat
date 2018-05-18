@@ -1,0 +1,39 @@
+{
+  
+  "pages": [
+    "pages/interview/interview",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/detaile/detaile"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#0097FE",
+    "navigationBarTitleText": "熊猫公考",
+    "navigationBarTextStyle": "#fff"
+  },
+
+  "tabBar": {
+    "selectedColor": "#0097FE",
+    "list": [
+      {
+        "pagePath": "pages/interview/interview",
+        "text": "面试",
+        "iconPath": "images/a_f.png",
+        "selectedIconPath": "images/a_t.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "Index",
+        "iconPath": "images/b_f.png",
+        "selectedIconPath": "images/b_t.png"
+      }
+    ]
+  },
+
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}

@@ -1,0 +1,22 @@
+<swiper class="swiper-css" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image bindtap='bannerClick' data-index='{{index}}' src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<!--列表  -->
+<view class='list'>
+  <view class='item_view' wx:for='{{datas}}' bindtap='itemClick' data-index='{{index}}'>
+    <image class='item_image' src='{{item.url}}'></image>
+    <view style='flex:1; width=100%;flex-direction: column;'>
+      <text class='item_title'>{{item.title}}</text>
+      <text class='item_content'>{{item.content}}</text>
+
+      <view style='display: flex; width=100%;flex-direction: row;'>
+        <view class='person_num'>{{item.person_num}}人学习</view>
+        <view class='price'>￥{{item.price}}</view>
+      </view>
+    </view>
+  </view>
+</view>
