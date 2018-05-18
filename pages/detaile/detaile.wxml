@@ -1,2 +1,12 @@
-<!--pages/detaile/detaile.wxml-->
-<text>pages/detaile/detaile.wxml</text>
+<view class='exam_title'>
+2018四川省公务员面试
+</view>
+<view class='exam_issue'>
+面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题
+</view>
+
+
+<button bindlongtap='start'>start</button>
+<button bindlongtap='pause'>pause</button>
+<button bindlongtap='stop'>stop</button>
+<button bindlongtap='play'>play</button>
