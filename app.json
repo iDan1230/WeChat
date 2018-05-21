@@ -1,10 +1,14 @@
 {
-  
   "pages": [
+    "pages/do_exe/do_exe",
+    "pages/courses/courses",
+    "pages/my/my",
     "pages/interview/interview",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/detaile/detaile"
+    "pages/detaile/detaile",
+    "pages/question/question",
+    "pages/err_correction/err_correction"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -12,10 +16,27 @@
     "navigationBarTitleText": "熊猫公考",
     "navigationBarTextStyle": "#fff"
   },
-
   "tabBar": {
     "selectedColor": "#0097FE",
     "list": [
+      {
+        "pagePath": "pages/do_exe/do_exe",
+        "text": "刷题",
+        "iconPath": "images/a_f.png",
+        "selectedIconPath": "images/a_t.png"
+      },
+      {
+        "pagePath": "pages/courses/courses",
+        "text": "课程",
+        "iconPath": "images/a_f.png",
+        "selectedIconPath": "images/a_t.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/a_f.png",
+        "selectedIconPath": "images/a_t.png"
+      },
       {
         "pagePath": "pages/interview/interview",
         "text": "面试",
@@ -30,7 +51,6 @@
       }
     ]
   },
-
   "networkTimeout": {
     "request": 10000,
     "downloadFile": 10000

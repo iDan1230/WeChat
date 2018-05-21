@@ -1,12 +1,13 @@
-<view class='exam_title'>
-2018四川省公务员面试
+<!--pages/question/question.wxml-->
+<view class='c_title_view' style='display: flex; width=100%;flex-direction: row;'>
+  <view class='c_title_name'>{{title}}</view>
+  <view class='c_title_index'>{{index}}/{{total}}</view>
 </view>
-<view class='exam_issue'>
-面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题面试题目标题
-</view>
+
+<view class='t_content'>问题：{{content}}</view>
 
 
-
+<!-- 录音  -->
 
 
   <view class="page-body">
@@ -75,13 +76,37 @@
     </view>
   </view>
 
+<!-- 录音  -->
 
 
 
-<!-- 
 
 
-<button bindlongtap='start'>start</button>
-<button bindlongtap='pause'>pause</button>
-<button bindlongtap='stop'>stop</button>
-<button bindlongtap='play'>play</button> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<view class='v_bottom' style='display: flex; width=100%;flex-direction: row;'>
+
+  <view class='bottom_left'  bindtap='up' wx:if="{{index > 1}}">上一题</view>
+
+  <view class='bottom_center' bindtap='questErr'>试题错误</view>
+
+  <view class='bottom_right' bindtap='next' wx:if="{{index < total}}">下一题</view>
+
+</view>

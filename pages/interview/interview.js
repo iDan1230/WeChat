@@ -77,7 +77,8 @@ Page({
   },
   changeIndicatorDots: function (e) {
     this.setData({
-      indicatorDots: !this.data.indicatorDots
+      indicatorDots: !this.data.indicatorDots,
+      
     })
   },
   bannerClick: function (e) {

@@ -1,0 +1,15 @@
+<!--pages/do_exe/do_exe.wxml-->
+<swiper class="swiper-css" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image bindtap='bannerClick' data-index='{{index}}' src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='list'>
+
+  <view class='item_view' wx:for='{{datas}}' bindtap='itemClick' data-index='{{index}}'>
+    <text class='item_name'>{{item.name}}</text>
+  </view>
+</view>
