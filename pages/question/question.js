@@ -9,6 +9,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+
+    showLayout: true,
+
     title: null,
     id: null,
 
@@ -26,7 +29,24 @@ Page({
 
     index: 1,
     total: 10,
-    content: '有两种观点，一种认为互联网交易会颠覆传统零售商，一种认为传统零售商无法替代，你怎么看？'
+    content: '有两种观点，一种认为互联网交易会颠覆传统零售商，一种认为传统零售商无法替代，你怎么看？',
+    issueIndex: 0,
+    issues: [
+      {
+        name: '问题一',
+        content: '问题一代发费地方就阿卡丽发动机卡房间啊回复可见的双方尽快回复可见啊'
+      },
+      {
+        name: '问题二',
+        content: '问题二代发费地方就阿卡丽发动机卡房间啊回复可见的双方尽快回复可见啊'
+      },
+      {
+        name: '问题三',
+        content: '问题三代发费地方就阿卡丽发动机卡房间啊回复可见的双方尽快回复可见啊'
+      }
+    ]
+
+
 
   },
 
@@ -50,7 +70,9 @@ Page({
     })
     console.log('item position： ' + this.data.id)
 
-
+    wx.showLoading({
+      title: '加载中',
+    })
     /**
      * 小程序网络框架
      * data:参数
@@ -70,27 +92,13 @@ Page({
         'content-type': 'application/json' // 默认值
       },
       success: function (res) {
-        wx.showToast({
-          title: '成功',
-          icon: '/images/a_f.png',
-          duration: 2000
 
-        })
       },
       fail: function () {
-        wx.showToast({
-          title: '失败',
-          icon: '/images/a_f.png',
-          duration: 2000
 
-        })
       },
       complete: function () {
-        wx.showToast({
-          title: '完成',
-          icon: '/images/a_f.png',
-          duration: 2000
-        })
+        wx.hideLoading()
       }
 
     })
@@ -222,26 +230,54 @@ Page({
   /**录音 */
 
 
+  /** 滑块 */
+  issueItem: function (e) {
+    let index = e.currentTarget.dataset.index;
+
+    console.log(index + "  ：item")
+    if (index == this.data.issueIndex) {
+      wx.showToast({
+        title: '本题',
+      })
+    } else {
+      this.setData({
+        issueIndex: index
+      })
+    }
+
+  },
+
 
   /**
    * 上一题
    */
   up: function () {
-    let index = this.data.index - 1
-    this.setData({
-      index: index
-    })
+    if (this.data.index > 0) {
+      let index = this.data.index - 1
+      this.setData({
+        index: index
+      })
+    } else {
+      wx.showToast({
+        title: '这是第一题',
+      })
+    }
 
   },
   /**
    * 下一题
    */
   next: function () {
-
-    let index = this.data.index + 1
-    this.setData({
-      index: index
-    })
+    if (this.data.index < this.data.total) {
+      let index = this.data.index + 1
+      this.setData({
+        index: index
+      })
+    } else {
+      wx.showToast({
+        title: '没有更多的题',
+      })
+    }
   },
   /**
    * 纠错

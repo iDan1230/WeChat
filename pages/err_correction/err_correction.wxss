@@ -1,1 +1,15 @@
 /* pages/err_correction/err_correction.wxss */
+
+textarea {
+  width: auto;
+  padding: 10rpx;
+  border: 1px solid;
+  font-size: 30rpx;
+  margin-top: 15rpx;
+  max-block-size: 6
+}
+
+.textarea-wrp {
+  padding: 15rpx;
+  background-color: #fff;
+}

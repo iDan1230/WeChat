@@ -1,2 +1,8 @@
 <!--pages/err_correction/err_correction.wxml-->
-<text>pages/err_correction/err_correction.wxml</text>
+<view class="page-section">
+
+  <view class="textarea-wrp">
+    <textarea auto-focus="true" style="height: 8em" placeholder='请详细描述问题所在，我们将及时教正，并且有奖励哦' />
+  </view>
+
+</view>

@@ -3,12 +3,9 @@
     "pages/do_exe/do_exe",
     "pages/courses/courses",
     "pages/my/my",
-    "pages/interview/interview",
-    "pages/index/index",
-    "pages/logs/logs",
-    "pages/detaile/detaile",
     "pages/question/question",
     "pages/err_correction/err_correction"
+
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -28,27 +25,16 @@
       {
         "pagePath": "pages/courses/courses",
         "text": "课程",
-        "iconPath": "images/a_f.png",
-        "selectedIconPath": "images/a_t.png"
+        "iconPath": "images/b_f.png",
+        "selectedIconPath": "images/b_t.png"
       },
       {
         "pagePath": "pages/my/my",
         "text": "我的",
-        "iconPath": "images/a_f.png",
-        "selectedIconPath": "images/a_t.png"
-      },
-      {
-        "pagePath": "pages/interview/interview",
-        "text": "面试",
-        "iconPath": "images/a_f.png",
-        "selectedIconPath": "images/a_t.png"
-      },
-      {
-        "pagePath": "pages/index/index",
-        "text": "Index",
-        "iconPath": "images/b_f.png",
-        "selectedIconPath": "images/b_t.png"
+        "iconPath": "images/c_f.png",
+        "selectedIconPath": "images/c_t.png"
       }
+
     ]
   },
   "networkTimeout": {
