@@ -1,0 +1,131 @@
+
+
+<view class='c_title_view' style='display: flex; width=100%;flex-direction: row;'>
+  <view class='c_title_name'>{{title}}</view>
+  <view class='c_title_index'>{{index}}/{{total}}</view>
+</view>
+<scroll-view scroll-y="true" style="height: 1280rpx;">
+  <text class='t_content'>问题：{{content}}</text>
+</scroll-view>
+
+
+<view class='header' >
+
+
+  <image class='imgController' src='/images/ic_down_controller.png' bindtap='showHide'></image>
+  <block wx:if="{{showLayout}}">
+    <view class='list'>
+      <block wx:for='{{issues}}' data-index='{{index}}'>
+        <text class='issueItem' style="color:{{item.itemColor}}" bindtap='issueItem' data-index='{{index}}'>{{item.name}}</text>
+      </block>
+    </view>
+
+    <scroll-view scroll-y="true" style="height: 600rpx;" catchtouchmove='true'>
+      <text class='issuesContent'>{{issues[issueIndex].content}}</text>
+    </scroll-view>
+
+
+
+
+
+    <!-- 录音  -->
+
+
+    <view class="page-body" catchtouchmove='true'>
+      <view class="page-section">
+        <block wx:if="{{recording === false && playing === false && hasRecord === false}}">
+          <view class="page-body-time">
+            <text class="time-big">{{formatedRecordTime}}</text>
+          </view>
+          <view class="page-body-buttons">
+            <view class="page-body-button"></view>
+            <view class="page-body-button" bindtap="startRecord">
+              <image src="/images/ic_record.png"></image>
+            </view>
+            <view class="page-body-button"></view>
+          </view>
+        </block>
+
+        <block wx:if="{{recording === true}}">
+          <view class="page-body-time">
+            <text class="time-big">{{formatedRecordTime}}</text>
+          </view>
+          <view class="page-body-buttons">
+            <view class="page-body-button"></view>
+            <view class="page-body-button" bindtap="stopRecord">
+              <view class="button-stop-record"></view>
+            </view>
+            <view class="page-body-button"></view>
+          </view>
+        </block>
+
+
+        <block wx:if="{{hasRecord === true && playing === false}}">
+          <view class="page-body-time">
+            <text class="time-big">{{formatedPlayTime}}</text>
+            <text class="time-small">{{formatedRecordTime}}</text>
+          </view>
+          <view class="page-body-buttons">
+            <view class="page-body-button"></view>
+            <view class="page-body-button" bindtap="playVoice">
+              <image src="/images/play.png"></image>
+            </view>
+            <view class="page-body-button" bindtap="clear">
+              <image src="/images/trash.png"></image>
+            </view>
+          </view>
+        </block>
+
+        <block wx:if="{{hasRecord === true && playing === true}}">
+          <view class="page-body-time">
+            <text class="time-big">{{formatedPlayTime}}</text>
+            <text class="time-small">{{formatedRecordTime}}</text>
+          </view>
+          <view class="page-body-buttons">
+            <view class="page-body-button" bindtap="stopVoice">
+              <image src="/images/stop.png"></image>
+            </view>
+            <view class="page-body-button" bindtap="pauseVoice">
+              <image src="/images/pause.png"></image>
+            </view>
+            <view class="page-body-button" bindtap="clear">
+              <image src="/images/trash.png"></image>
+            </view>
+          </view>
+        </block>
+
+      </view>
+    </view>
+
+    <!-- 录音  -->
+
+
+  </block>
+
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<view class='v_bottom' style='display: flex; width=100%;flex-direction: row;'>
+  <image src='/images/ic_up_quest.png' class='bottom_left_right' bindtap='up' wx:if="{{index >= 0}}"></image>
+  <view class='bottom_center'>
+    <text bindtap='questErr' class='text'>试题错误?</text>
+  </view>
+  <image src='/images/ic_next_quest.png' class='bottom_left_right' bindtap='next' wx:if="{{index <= total}}"></image>
+</view>

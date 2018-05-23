@@ -62,7 +62,7 @@ Page({
     wx.setStorageSync('title', this.data.datas[index].name)
     wx.setStorageSync('index', index)
     wx.navigateTo({
-      url: '/pages/question/question',
+      url: '/page/doExercise/question/question',
     })
     wx.showToast({
       title: 'item' + index,

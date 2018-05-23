@@ -1,11 +1,10 @@
 {
   "pages": [
-    "pages/do_exe/do_exe",
+    "page/doExercise/do_exe",
     "pages/courses/courses",
     "pages/my/my",
-    "pages/question/question",
-    "pages/err_correction/err_correction"
-
+    "page/doExercise/question/question",
+    "page/doExercise/err_correction/err_correction"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -17,7 +16,7 @@
     "selectedColor": "#0097FE",
     "list": [
       {
-        "pagePath": "pages/do_exe/do_exe",
+        "pagePath": "page/doExercise/do_exe",
         "text": "刷题",
         "iconPath": "images/a_f.png",
         "selectedIconPath": "images/a_t.png"
